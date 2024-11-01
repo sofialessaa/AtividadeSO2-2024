@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<br>
+<table id="users" class="table table-bordered display">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Filme</th>
+            <th>Nota</th>
+            <th>Opinião</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for user in userDetails %}
+            <tr>
+                <td>{{ user[1] }}</td> <!-- Nome -->
+                <td>{{ user[2] }}</td> <!-- Email -->
+                <td>{{ user[3] }}</td> <!-- Filme -->
+                <td>{{ user[4] }}</td> <!-- Nota -->
+                <td>{{ user[5] }}</td> <!-- Opinião -->
+                
+                <!-- Botão Editar -->
+                <td>
+                    <a href="{{ url_for('editar', id=user[0]) }}" class="btn btn-warning btn-sm">Editar</a>
+                </td>
+                
+                <!-- Botão Excluir -->
+                <td>
+                    <form action="{{ url_for('excluir', id=user[0]) }}" method="POST" onsubmit="return confirm('Tem certeza de que deseja excluir este usuário?');">
+                        <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

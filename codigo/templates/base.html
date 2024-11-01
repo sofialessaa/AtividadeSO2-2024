@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static', filename='./css/normalize.css')}}">
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static', filename='./css/styles.css')}}">
+
+</head>
+
+<body id="bodyhome">
+
+    <!-- Parte superior das páginas -->
+    <div class="topo">
+        <img src="../static/imagens/logo.png" alt="logo" width="50px">
+    
+            <div>
+                <a href="/">Cadastro |</a>
+                <a href= "/users">Usuários</a>
+            </div>
+    
+    </div>
+
+    {% block conteudo %}
+
+    {% endblock %}
+    
+    <!-- Parte inferior das páginas -->
+    <h4>Todos os direitos reservados</h4>
+
+</body>
+</html>

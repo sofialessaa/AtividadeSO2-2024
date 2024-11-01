@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div classname="form">
+
+    <!-- Parte do email, assunto e descrição -->
+    <form method="post" action="/">
+        
+        Nome: <br>
+            <input type="text" name="nome" required placeholder="Digite seu nome"><br>
+
+        E-mail: <br>
+            <input type="email" name="email" required placeholder="Digite seu e-mail"><br>
+
+        Filme assistido: <br>
+            <input type="text" name="filme" required placeholder="Digite o nome do filme"><br>
+
+        Nota: <br>
+            <input type="text" name="nota" required></input><br>
+        
+        Opinião sobre o filme: <br>
+        <input type="text" name="opiniao" required><br>
+      
+        
+        <input type="submit">
+        
+    </form>
+</div>
+
+{% endblock %}

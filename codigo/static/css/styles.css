@@ -1,0 +1,37 @@
+/* CSS de todas as páginas */
+body{
+    padding: 0;
+    margin: 0 auto;
+    width: 50%;    
+}
+
+.topo{ 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h4{text-align: center;
+    color:white;
+}
+
+/* Página Cadastro */
+.input{
+    border-radius: 15px;
+    color: white;
+}
+
+/* Página Usuários */
+ table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 5px 10px;
+}
+th{
+    background-color: rgba(109, 119, 168, 0.459);
+}

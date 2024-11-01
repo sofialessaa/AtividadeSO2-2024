@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h2>Editar Usuário</h2>
+<form method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" value="{{ user[1] }}" class="form-control"><br>
+
+    <label>E-mail:</label>
+    <input type="email" name="email" value="{{ user[2] }}" class="form-control"><br>
+
+    <label>Filme:</label>
+    <input type="text" name="filme" value="{{ user[3] }}" class="form-control"><br>
+
+    <label>Nota:</label>
+    <input type="number" name="nota" value="{{ user[4] }}" class="form-control"><br>
+
+    <label>Opinião:</label>
+    <textarea name="opiniao" class="form-control">{{ user[5] }}</textarea><br>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="{{ url_for('users') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
